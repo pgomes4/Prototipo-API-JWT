@@ -1,6 +1,7 @@
-# Prototipo-API-JWT
+# <h1 align="center"> Prototipo-API-JWT </h1>
 
-> Status do projeto: Em desenvolvimento
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
 
 O protótipo foi desenvolvido para demonstrar uma arquitetura completa de autenticação e autorização utilizando JWT (JSON Web Token), RBAC (Role-Based Access Control), refresh token, controle de sessão e proteção de rotas.
 
@@ -18,4 +19,15 @@ Frontend: → http:/localhost:5173 ou https:/localhost:5173
 > Porta: 5432
 > Usuário local: postgres
 ```
+## Roles Utilizadas
+```
+> AdmMaster
+> UserFinal
+```
+### Usuários: 
+|nome|email|departamento|status|
+| -------- |-------- |-------- |-------- |
+|Adm Master Fictício|admmaster@fictional.local|Infraestrutura|Ativo|
+|Colaborador RH Fictício|rh.user@fictional.local|RH|Ativo|
+
 
