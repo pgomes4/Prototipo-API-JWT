@@ -25,9 +25,11 @@ Frontend: → http:/localhost:5173 ou https:/localhost:5173
 > UserFinal
 ```
 ### Usuários: 
+
+<h3>
 |nome|email|departamento|status|
 | -------- |-------- |-------- |-------- |
 |Adm Master Fictício|admmaster@fictional.local|Infraestrutura|Ativo|
 |Colaborador RH Fictício|rh.user@fictional.local|RH|Ativo|
 
-
+</h3>
