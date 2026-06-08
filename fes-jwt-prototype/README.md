@@ -63,14 +63,14 @@ http://localhost:5173
 
 ```txt
 E-mail: admmaster@fictional.local
-Senha: Admin@123
+Senha: ******
 ```
 
 ### UserFinal RH
 
 ```txt
 E-mail: rh.user@fictional.local
-Senha: User@123
+Senha: *****
 ```
 
 ## Endpoints principais
