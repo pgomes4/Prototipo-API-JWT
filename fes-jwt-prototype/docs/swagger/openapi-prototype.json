@@ -1,0 +1,61 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "FictionalEnterpriseSolutions JWT Prototype API",
+    "version": "0.1.0",
+    "description": "Documentação inicial do protótipo JWT com Access Token, Refresh Token e RBAC."
+  },
+  "servers": [
+    { "url": "http://localhost:3333/api/v1" }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "summary": "Realiza login e retorna accessToken e refreshToken",
+        "responses": { "200": { "description": "Login realizado" }, "401": { "description": "Credenciais inválidas" } }
+      }
+    },
+    "/auth/refresh": {
+      "post": {
+        "summary": "Renova o accessToken usando refreshToken",
+        "responses": { "200": { "description": "Token renovado" }, "401": { "description": "Refresh token inválido, expirado ou revogado" } }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "summary": "Revoga refresh token",
+        "responses": { "200": { "description": "Logout realizado" } }
+      }
+    },
+    "/me": {
+      "get": {
+        "security": [{ "bearerAuth": [] }],
+        "summary": "Retorna dados do usuário autenticado",
+        "responses": { "200": { "description": "Usuário autenticado" }, "401": { "description": "Token ausente, inválido ou expirado" } }
+      }
+    },
+    "/admin-area": {
+      "get": {
+        "security": [{ "bearerAuth": [] }],
+        "summary": "Rota protegida por role AdmMaster",
+        "responses": { "200": { "description": "Acesso permitido" }, "403": { "description": "Acesso negado por RBAC" } }
+      }
+    },
+    "/user-area": {
+      "get": {
+        "security": [{ "bearerAuth": [] }],
+        "summary": "Rota protegida para AdmMaster ou UserFinal",
+        "responses": { "200": { "description": "Acesso permitido" }, "403": { "description": "Acesso negado por RBAC" } }
+      }
+    }
+  }
+}
