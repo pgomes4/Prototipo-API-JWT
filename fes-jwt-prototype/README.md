@@ -76,12 +76,14 @@ Senha: *****
 ## Endpoints principais
 
 ```txt
-POST /api/v1/auth/login
-POST /api/v1/auth/refresh
-POST /api/v1/auth/logout
-GET  /api/v1/me
-GET  /api/v1/admin-area
-GET  /api/v1/user-area
+POST    /api/v1/auth/login
+POST    /api/v1/auth/refresh
+POST    /api/v1/auth/logout
+PATCH   /api/v1/auth/inativar-usuario
+GET     /api/v1/me
+GET     /api/v1/admin-area
+GET     /api/v1/user-area
+
 ```
 
 ## Prioridade de testes
@@ -94,3 +96,5 @@ GET  /api/v1/user-area
 6. Refresh token válido
 7. Logout revogando refresh token
 8. Reutilização de refresh token após logout
+9. Inativar usuário por email
+10. Com o login inativado tentar acessar rotas.
