@@ -4,6 +4,7 @@ const { success, error } = require('../utils/apiResponse')
 const authService = new AuthService()
 
 class AuthController {
+  
   static async login(req, res) {
     const { email, password } = req.body
 
@@ -14,6 +15,7 @@ class AuthController {
       return error(res, err.status || 401, err.message, err.code || 'AUTH_INVALID_CREDENTIALS')
     }
   }
+   
 
   static async refresh(req, res) {
     const { refreshToken } = req.body
@@ -25,7 +27,7 @@ class AuthController {
       return error(res, err.status || 401, err.message, err.code || 'AUTH_REFRESH_TOKEN_INVALID')
     }
   }
-
+  
   static async logout(req, res) {
     const { refreshToken } = req.body
     const authHeader = req.headers.authorization
@@ -37,8 +39,9 @@ class AuthController {
       return error(res, 400, err.message, 'AUTH_LOGOUT_ERROR')
     }
   }
+
   static async inativarUsuario(req, res){
-    const {email} = req.body
+    const { email } = req.body
     try {
       const data = await authService.inativarUsuarioPorEmail(email)
       return success(
@@ -47,7 +50,7 @@ class AuthController {
         'Usuário inativado e tokens revogados com sucesso.',
         data
       )
-    } catch (error) {
+    } catch (err) {
       return error(
         res,
         err.status || 400,
@@ -56,6 +59,8 @@ class AuthController {
       )
     }
   }
+ 
 }
+
 
 module.exports = AuthController
