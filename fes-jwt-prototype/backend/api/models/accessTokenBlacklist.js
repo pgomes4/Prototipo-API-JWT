@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
             },
             token: {
                 type: DataTypes.TEXT,
-                allowNull: false
+                allowNull: true
             },
             usuario_id:{
                 type: DataTypes.TEXT,
