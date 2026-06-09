@@ -37,6 +37,25 @@ class AuthController {
       return error(res, 400, err.message, 'AUTH_LOGOUT_ERROR')
     }
   }
+  static async inativarUsuario(req, res){
+    const {email} = req.body
+    try {
+      const data = await authService.inativarUsuarioPorEmail(email)
+      return success(
+        res,
+        200,
+        'Usuário inativado e tokens revogados com sucesso.',
+        data
+      )
+    } catch (error) {
+      return error(
+        res,
+        err.status || 400,
+        err.message || 'Erro ao inativar o usuário.',
+        err.code || 'USER_INACTIVATION_ERROR'
+      )
+    }
+  }
 }
 
 module.exports = AuthController
