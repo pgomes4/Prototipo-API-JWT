@@ -1,4 +1,5 @@
 const auth = require('./authRoute')
+const lifecycle = require('./lifecycleRoute')
 const prototype = require('./prototypeRoute')
 const usuario = require('./usuariosRoute')
 const role = require('./role')
@@ -7,11 +8,13 @@ const seguranca = require('./seguranca')
 
 module.exports = app => {
   app.use(
-    auth,
-    prototype,
-    usuario,
-    role,
-    permissao,
-    seguranca
+  auth,
+  lifecycle,
+  prototype,
+  usuario,
+  role,
+  permissao,
+  seguranca
+
   )
 }
