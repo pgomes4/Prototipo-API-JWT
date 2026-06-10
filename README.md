@@ -72,16 +72,18 @@ UserFinal
 
 ---
 ## 🔐 Funcionalidades Implementadas
-Login
-Logout
-Access Token
-Refresh Token
-Middleware de Autenticação
-Middleware de Autorização (RBAC)
-Blacklist de Tokens
-Revogação de Sessão
-Proteção de Rotas
-Controle de Permissões
+
+- Login
+- Logout
+- JWT Authentication
+- Access Token
+- Refresh Token
+- Middleware de Autenticação
+- Middleware de Autorização (RBAC)
+- Proteção de Rotas
+- Blacklist de Tokens
+- Revogação de Sessão
+- Controle de Permissões
 ---
 
 ## ⚙️ Configuração do Ambiente
