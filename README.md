@@ -85,6 +85,18 @@ UserFinal
 - Revogação de Sessão
 - Controle de Permissões
 ---
+## 1. Programas necessários
+Instalar no Windows:
+
+```
+- Git
+- Node.js 24+
+- PostgreSQL
+- pgAdmin
+- VS Code
+- Postman
+```
+---
 
 ## ⚙️ Configuração do Ambiente
 ## Backend
