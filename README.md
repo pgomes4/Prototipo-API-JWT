@@ -26,7 +26,7 @@ Backend Node.js
 JWT + RBAC
         ↓
 PostgreSQL
-
+```
 ---
 ## 🌐 Ambiente
 O protótipo terá os ambientes de backend e frontend que serão implementados em localhost.
